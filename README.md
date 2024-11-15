@@ -1,3 +1,3 @@
-#Algoritms repo written in cpp
+# Algoritms repo written in cpp
 <br>
-Author-Nihal Ahemad
+ Author-Nihal Ahemad
