@@ -22,23 +22,21 @@
 using namespace std;
 
 int main() {
-    int n=6;
-    int arr[n]={2,3,6,7,11,15};
-    int key=9;
-    int start=0;
-    int end=n;
-    for (int i=0; i<n; i++){
-        int mid=(start+end)/2;
-        int sum=arr[i]+arr[mid];
-        if (sum==key){
-            cout<<arr[i]<<" + "<<arr[mid]<<" = "<<" "<<key<<endl;
+    int n = 6;
+    int arr[n] = {2, 3, 6, 7, 11, 15};
+    int key = 9;
+
+    int start = 0, end = n - 1;
+    while (start < end) {
+        int sum = arr[start] + arr[end];
+        if (sum == key) {
+            cout << arr[start] << " + " << arr[end] << " = " << key << endl;
+            break; // If only one pair is required, otherwise remove this
+        } else if (sum > key) {
+            end--;
+        } else {
+            start++;
         }
-        else if (sum>key){
-            end=mid-1;
-        }
-        else {
-            start=mid+1;
-        }   
     }
     return 0;
 }
